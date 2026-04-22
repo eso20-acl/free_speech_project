@@ -1,10 +1,4 @@
 # paste your URLs here, one per line
-https://freespeechproject.georgetown.edu/tracker-entries/students-rebuffed-in-effort-to-establish-pro-palestinian-club/
-https://freespeechproject.georgetown.edu/tracker-entries/students-reprimanded-for-discrimination-after-free-speech-event-with-offensive-signs/
-https://freespeechproject.georgetown.edu/tracker-entries/university-changes-speaker-policy-after-richard-spencer-visits/
-https://freespeechproject.georgetown.edu/tracker-entries/university-declines-to-rehire-adjunct-anthropologist-for-saying-north-korea-hostage-got-what-he-deserved/
-https://freespeechproject.georgetown.edu/tracker-entries/university-enacts-new-sexual-misconduct-policy/
-https://freespeechproject.georgetown.edu/tracker-entries/university-president-cancels-talk-by-conservative-commentator-citing-hate-speech/
 https://freespeechproject.georgetown.edu/tracker-entries/university-president-defends-professors-academic-freedom/
 https://freespeechproject.georgetown.edu/tracker-entries/violence-threats-during-floor-debate-over-sanctuary-cities-in-texas-legislature/
 https://freespeechproject.georgetown.edu/tracker-entries/virginia-general-assembly-passes-symbolic-bill-to-protect-free-speech/

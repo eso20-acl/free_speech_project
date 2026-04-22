@@ -16,7 +16,7 @@ On many Macs, you can’t install packages “globally” with pip. The easiest 
 ```bash
 cd "free_speech_compiler_clean"
 python3 -m venv .venv
-./.venv/bin/python -m pip install -r requirements.txt
+./.venv/bin/python -m pip install -r requirements.txt #past this Ella!!!!
 ```
 
 ## Your input file (the links)
