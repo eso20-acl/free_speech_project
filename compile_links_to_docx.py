@@ -5,6 +5,7 @@ import re
 import time
 from dataclasses import dataclass
 from datetime import datetime
+from pathlib import Path
 from typing import Iterable
 from urllib.parse import urlparse
 
@@ -198,6 +199,10 @@ def compile_urls_to_docx(
     delay_s: float = 0.4,
     timeout_s: float = 30.0,
 ) -> None:
+    out_path = Path(output_docx)
+    if out_path.parent and str(out_path.parent) not in {".", ""}:
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+
     doc = Document()
     doc.add_heading("Combined Links Export", level=1)
     doc.add_paragraph(f"Generated: {datetime.now().isoformat(timespec='seconds')}")
@@ -215,7 +220,7 @@ def compile_urls_to_docx(
             doc.add_page_break()
         time.sleep(delay_s)
 
-    doc.save(output_docx)
+    doc.save(str(out_path))
 
 
 def main() -> int:

@@ -9,10 +9,14 @@ It’s meant for pages like FreeSpeechProject entries (it tries to grab the titl
 - **Python 3.10+** (Python 3.11 is great)
 - Internet connection (it downloads the pages)
 
-Install the Python packages:
+### Install the Python packages (Mac-friendly)
+
+On many Macs, you can’t install packages “globally” with pip. The easiest fix is to use a **virtual environment** (a private Python just for this folder).
 
 ```bash
-python3 -m pip install -r requirements.txt
+cd "free_speech_compiler_clean"
+python3 -m venv .venv
+./.venv/bin/python -m pip install -r requirements.txt
 ```
 
 ## Your input file (the links)
@@ -34,7 +38,7 @@ Rules:
 From this folder, run:
 
 ```bash
-python3 compile_links_to_docx.py --input links.txt --output output.docx
+./.venv/bin/python compile_links_to_docx.py --input links.txt --output output.docx
 ```
 
 ### Optional knobs (if a site is slow or picky)
@@ -42,24 +46,23 @@ python3 compile_links_to_docx.py --input links.txt --output output.docx
 - **Slow down requests** (be nicer to websites):
 
 ```bash
-python3 compile_links_to_docx.py --input links.txt --output output.docx --delay 1.0
+./.venv/bin/python compile_links_to_docx.py --input links.txt --output output.docx --delay 1.0
 ```
 
 - **Give each page more time to load**:
 
 ```bash
-python3 compile_links_to_docx.py --input links.txt --output output.docx --timeout 60
+./.venv/bin/python compile_links_to_docx.py --input links.txt --output output.docx --timeout 60
 ```
 
 ## Where the results go (and how to “store information after”)
 
 The script saves whatever path you give `--output`.
 
-A simple way to stay organized is to make an `outputs/` folder and name files by date:
+A simple way to stay organized is to use an `outputs/` folder and name files by date. (The script will create the output folder automatically if it doesn’t exist.)
 
 ```bash
-mkdir -p outputs
-python3 compile_links_to_docx.py --input links.txt --output "outputs/combined_$(date +%Y-%m-%d).docx"
+./.venv/bin/python compile_links_to_docx.py --input links.txt --output "outputs/combined_$(date +%Y-%m-%d).docx"
 ```
 
 Recommended workflow:
@@ -99,7 +102,7 @@ Example `outputs/NOTES.md`:
   - Re-run the install step:
 
 ```bash
-python3 -m pip install -r requirements.txt
+./.venv/bin/python -m pip install -r requirements.txt
 ```
 
 ## Saving changes to GitHub (so you don’t lose work)
